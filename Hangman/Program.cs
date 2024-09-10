@@ -13,9 +13,7 @@ internal class Program
 
         Name();
         MaskedWord();
-        Letter();        
-        
-
+        Letter();
     }
 
     public static string name { get; set; }
@@ -25,7 +23,7 @@ internal class Program
 
     public static void Name()
     {
-        Console.Write("What's the name you want the other to guess?: ");
+        Console.Write("What's the Word you want the other to guess?: ");
         name = ReadHiddenInput().ToUpper();
 
         while (true)
@@ -49,7 +47,7 @@ internal class Program
         char[] maskedWordArray = new string('_', name.Length).ToCharArray();
         while (tries.Count < 6)
         {     
-            Console.Write("\nPlease write a letter: ");
+            Console.Write("\nWhat do you guess on?: ");
             string input = Console.ReadLine().ToUpper();
 
             if (string.IsNullOrEmpty(input) || input.Length != 1)
@@ -117,7 +115,7 @@ internal class Program
         if (tries == 1)
         {
 
-            Console.WriteLine("---------------");
+            Console.WriteLine(" --------------");
             Console.WriteLine(" ||          ||");
             Console.WriteLine(" ||          ||");
             Console.WriteLine(" ||          ||");
@@ -125,12 +123,12 @@ internal class Program
         else if (tries == 2)
         {
 
-            Console.WriteLine("         |-----------");
+            Console.WriteLine("         ---/--------");
+            Console.WriteLine("         | /         ");
+            Console.WriteLine("         |/         ");
             Console.WriteLine("         |");
             Console.WriteLine("         |");
-            Console.WriteLine("         |");
-            Console.WriteLine("         |");
-            Console.WriteLine("---------------");
+            Console.WriteLine(" --------------");
             Console.WriteLine(" ||          ||");
             Console.WriteLine(" ||          ||");
             Console.WriteLine(" ||          ||");
@@ -138,13 +136,13 @@ internal class Program
         else if (tries == 3)
         {
 
-            Console.WriteLine("         ------------");
-            Console.WriteLine("         |          |");
-            Console.WriteLine("         |          ");
+            Console.WriteLine("         ---/--------");
+            Console.WriteLine("         | /         |");
+            Console.WriteLine("         |/         ");
             Console.WriteLine("         |");
             Console.WriteLine("         |");
             Console.WriteLine("         |");
-            Console.WriteLine("---------------");
+            Console.WriteLine(" --------------");
             Console.WriteLine(" ||          ||");
             Console.WriteLine(" ||          ||");
             Console.WriteLine(" ||          ||");
@@ -152,13 +150,13 @@ internal class Program
         else if (tries == 4)
         {
 
-            Console.WriteLine("         ------------");
-            Console.WriteLine("         |          |");
-            Console.WriteLine("         |          ()");
+            Console.WriteLine("         ---/--------");
+            Console.WriteLine("         | /         |");
+            Console.WriteLine("         |/         ()");
             Console.WriteLine("         |         ");
             Console.WriteLine("         |            ");
             Console.WriteLine("         |            ");
-            Console.WriteLine("---------------");
+            Console.WriteLine(" --------------");
             Console.WriteLine(" ||          ||");
             Console.WriteLine(" ||          ||");
             Console.WriteLine(" ||          ||");
@@ -166,13 +164,13 @@ internal class Program
         else if (tries == 5)
         {
 
-            Console.WriteLine("         ------------");
-            Console.WriteLine("         |          |");
-            Console.WriteLine("         |          ()");
+            Console.WriteLine("         ---/--------");
+            Console.WriteLine("         | /         |");
+            Console.WriteLine("         |/         ()");
             Console.WriteLine("         |         |()|");
             Console.WriteLine("         |            ");
             Console.WriteLine("         |            ");
-            Console.WriteLine("---------------");
+            Console.WriteLine(" --------------");
             Console.WriteLine(" ||          ||");
             Console.WriteLine(" ||          ||");
             Console.WriteLine(" ||          ||");
@@ -186,7 +184,7 @@ internal class Program
             Console.WriteLine("         |         |()|");
             Console.WriteLine("         |         _||_");
             Console.WriteLine("         |");
-            Console.WriteLine("---------------");
+            Console.WriteLine(" --------------");
             Console.WriteLine(" ||          ||");
             Console.WriteLine(" ||          ||");
             Console.WriteLine(" ||          ||");
